@@ -67,7 +67,8 @@ fun PuppyDetail(puppy: PuppyData, modifier: Modifier = Modifier, context: Activi
 
             Spacer(modifier.height(12.dp))
 
-            Text( "Additional Info",
+            Text(
+                "Additional Info",
                 style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 16.sp)
             )
             Text(
