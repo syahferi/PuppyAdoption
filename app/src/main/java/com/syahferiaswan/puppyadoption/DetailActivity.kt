@@ -11,6 +11,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -53,20 +54,27 @@ fun PuppyDetail(puppy: PuppyData, modifier: Modifier = Modifier, context: Activi
         },
     ) {
         Column(modifier.padding(16.dp)) {
-            Text( "Description",
-                style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 16.sp)
-            )
-            Spacer(modifier.height(4.dp))
-            Text(
-                puppy.desc ?: "",
-                style = TextStyle(fontSize = 15.sp)
-            )
-            Spacer(modifier.height(6.dp))
             Image(
                 painter = painterResource(puppy.image),
                 contentDescription = "image $puppy.name",
-                modifier = modifier.fillMaxWidth(),
+                contentScale = ContentScale.Crop,
+                modifier = modifier.fillMaxWidth()
             )
+            Spacer(modifier.height(6.dp))
+            Text("Hello my name is ${puppy.name}")
+            Text("age: ${puppy.age} years old")
+            Text("type: ${puppy.type}")
+
+            Spacer(modifier.height(12.dp))
+
+            Text( "Additional Info",
+                style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 16.sp)
+            )
+            Text(
+                puppy.desc ?: "",
+                style = TextStyle(fontWeight = FontWeight.Light, fontSize = 15.sp)
+            )
+            Spacer(modifier.height(6.dp))
         }
     }
 }

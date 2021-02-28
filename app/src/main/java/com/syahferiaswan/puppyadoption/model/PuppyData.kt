@@ -5,11 +5,15 @@ import android.os.Parcelable
 
 data class PuppyData(
     var name: String?,
+    var type: String?,
+    var age: Int,
     var image: Int,
     var desc: String?,
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
+        parcel.readString(),
+        parcel.readInt(),
         parcel.readInt(),
         parcel.readString()
     ) {
@@ -17,6 +21,8 @@ data class PuppyData(
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)
+        parcel.writeString(type)
+        parcel.writeInt(age)
         parcel.writeInt(image)
         parcel.writeString(desc)
     }

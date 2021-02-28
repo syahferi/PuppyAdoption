@@ -2,6 +2,7 @@ package com.syahferiaswan.puppyadoption
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.RatingBar
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -54,7 +55,7 @@ fun BodyContent(viewModel: PuppyViewModel) {
 
 @Composable
 fun PuppyContent(modifier: Modifier = Modifier, puppyData: List<PuppyData>) {
-    Scaffold(topBar = { TopAppBar(title = { Text("Main Page") }) })  {
+    Scaffold(topBar = { TopAppBar(title = { Text("Home Page") }) })  {
         LazyColumn(
             contentPadding = PaddingValues(top = 8.dp)
         ) {
@@ -96,10 +97,8 @@ fun PuppyItem(modifier: Modifier, puppyItem: PuppyData) {
                     style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 )
                 Text(
-                    puppyItem.desc ?: "",
-                    style = TextStyle(fontWeight = FontWeight.Light, fontSize = 13.sp),
-                    overflow = TextOverflow.Ellipsis,
-                    maxLines = 3
+                    "Type: ${puppyItem.type }" ?: "",
+                    style = TextStyle(fontWeight = FontWeight.Light, fontSize = 15.sp),
                 )
             }
         }
