@@ -1,4 +1,4 @@
-# Put title of your app here
+# Puppy Adoption
 
 ![Workflow result](https://github.com/syahferiaswan/PuppyAdoption/workflows/Check/badge.svg)
 
@@ -14,7 +14,7 @@ In my app fully with compose and use view model for getting data.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-<img src="/results/screenshot1.png" width="260">&emsp;<img src="/results/screenshot2.png" width="260">
+<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
 
 ## License
 ```
