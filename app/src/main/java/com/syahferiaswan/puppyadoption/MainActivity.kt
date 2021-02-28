@@ -97,7 +97,7 @@ fun PuppyItem(modifier: Modifier, puppyItem: PuppyData) {
                     style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 )
                 Text(
-                    "Type: ${puppyItem.type }" ?: "",
+                    "Type: ${puppyItem.type }",
                     style = TextStyle(fontWeight = FontWeight.Light, fontSize = 15.sp),
                 )
             }
